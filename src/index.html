@@ -1,8 +1,42 @@
-<w-html app="main">
-    <section>
-        <center>
-            <wdg:button $text="English" $icon="flag-en" />
-            <wdg:button $text="Français" $icon="flag-fr" />
-        </center>
-    </section>
-</w-html>
+<x-html app="app">
+  <header class="theme-elevation-8">Prix total : <b id="price">...</b></header>
+  <section class="theme-color-bg-B3">
+    <wdg:combo id="model" $label="Modèle" $wide="true" slot:value="refresh" $value="A12650">        
+      <content json>{
+        "A11650": "Silver Line",
+        "A12650": "Silver Line (7 places)",
+        "B14450": "Stepway",
+        "B15450": "Stepway (7 places)",
+        "C10150": "Lodgy",
+        "D14650": "SL Explorer",
+        "D15150": "SL Explorer (7 places)"
+      }</content>
+    </wdg:combo>    
+    <wdg:combo id="color" $label="Couleur" $wide="true" slot:value="refresh" $value="A0">    
+      <content json>{
+        "A0": "Blanc Glacier",
+        "B0": "Bleu Navy",
+        "C500": "Autre couleur"
+      }</content>
+    </wdg:combo>
+    <wdg:combo id="jantes" $label="Jantes" $wide="true" slot:value="refresh" $value="A0">
+      <content json>{
+        "A0": "Standards",
+        "B450": "Alliage 15'' Nepta"
+      }</content>
+    </wdg:combo>
+    <wdg:combo id="motor" $label="Moteur" $wide="true" slot:value="refresh" $value="B1700">
+      <content json>{
+        "A0": "Essence SCe 100",
+        "B1700": "Essence TCe 115"
+      }</content>
+    </wdg:combo>
+    <wdg:checkbox id="media" $text="Media Nav Evolution" slot:value="refresh" /><br/>
+    <wdg:checkbox id="confort" $text="Volant, siège, ceintures réglables" slot:value="refresh" /><br/>
+    <wdg:checkbox id="confortPlus" $text="Retro enfants, filet, ..." slot:value="refresh" /><br/>
+    <wdg:checkbox id="radar" $text="Radars de recul" slot:value="refresh" /><br/>
+    <wdg:checkbox id="smog" $text="Projecteurs antibrouillard" slot:value="refresh" /><br/>
+    <wdg:checkbox id="speed" $text="Régulateur de vitesse" slot:value="refresh" /><br/>
+    <wdg:checkbox id="wheel" $text="Roue de secours" slot:value="refresh" /><br/>
+  </section>
+</x-html>

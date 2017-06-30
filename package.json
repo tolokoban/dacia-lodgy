@@ -6,7 +6,7 @@
         "type": "git",
         "url": "https://github.com/tolokoban/dacia-lodgy.git"
     },
-    "homepage": "https://tolokoban.github.io/dacia-lodgy",
+    "homepage": "https://github.com/tolokoban/dacia-lodgy",
     "license": "GPL-3.0",
     "scripts": {
         "test": "node node_modules/karma/bin/karma start karma.conf.js",
@@ -30,7 +30,7 @@
         },
         "output": "www"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "reservedModules": [],
     "dependencies": {
         "jasmine-core": "^2.6.4",
